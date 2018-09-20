@@ -1,0 +1,110 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Campaign_SP2017.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+   <link href="Content/StyleSheet1.css" rel="stylesheet" /> 
+   <script src="/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            display: block;
+            max-width: 100%;
+            height: 187px;
+            width: 427px;
+        }
+    </style>
+</head>
+<body class="body">
+    
+    <form id="form1" runat="server" class="form-horizontal">
+        <div class="container">
+            <nav class="navbar navbar-default navi">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed"
+                            data-toggle="collapse" data-target="#mainMenu">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/Default">Home</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="mainMenu">
+                        <ul class="nav navbar-nav">
+                            
+                          <li runat="server" class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Employees &nbsp;<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/Employee/Information">Employee Information</a></li>
+                                    <li><a href="/Employee/Commissions">Employee Commissions</a></li>
+                                    <li><a href="/Employee/Maintenance">Employee Information Maintenance</a></li>
+                                </ul>
+                                </li>
+
+                            <li runat="server" class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Customers&nbsp;<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/Customer/CustomerDisplay">Customer Display</a></li>
+                                    <li><a href="/Customer/CustomerMaintenance">Customer Information Maintenance</a></li>
+                                </ul>
+                                </li>
+
+                            <li runat="server" class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products &nbsp;<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                     <li><a href="/Products/ProductDisplay">Product Information</a></li>
+                                    <li><a href="/Products/ItemsAboveSpecifiedAmount">Items Above Specified Amount</a></li>
+                                    <li><a href="/Products/Categories">Product Categories</a></li>
+                                    <li><a href="/Products/ProductMaintenance">Product Maintenance</a></li>
+                                </ul>
+                                </li>
+                                <li runat="server" class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Company Profits &nbsp;<span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="/CompanyProfits/CompanyRevenue">Company Revenue</a></li>
+                                        <li><a href="/CompanyProfits/CompanyPurchases">Company Purchases</a></li>
+                                    </ul>
+                                </li>
+                                
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <header class="jumbot jumbotron">
+                <img src="/Pictures/Mountain_Goat_Outfitters.jpg" alt="Moutain Goat Outfitters" class="auto-style1" />
+            </header>
+
+
+
+
+
+
+
+            
+                <asp:ContentPlaceHolder ID="mainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            
+
+            <footer>
+                <p class="text-right">
+                    &copy;
+                    <asp:Label ID="lblYear" runat="server"></asp:Label>
+                    <span class="text-capitalize">Moutain Goat Outfitters </span>
+                </p>
+
+            </footer>
+
+        </div>
+    </form>
+</body>
+</html>

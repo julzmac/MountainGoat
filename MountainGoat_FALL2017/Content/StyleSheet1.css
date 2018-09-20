@@ -1,0 +1,22 @@
+﻿.jumbot {
+    background-color: lightyellow;
+    
+}
+.header {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    margin: 10px;
+    
+}
+.navi {
+    background-color: lightgoldenrodyellow;
+    color: black;
+    font-weight: bold;
+    border-color: black;
+}
+
+.body {
+    background-color: lightgoldenrodyellow;
+        color: black;
+}
